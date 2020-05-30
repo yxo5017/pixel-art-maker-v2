@@ -7,6 +7,7 @@ makeGrid();
 
 function makeGrid(event){
   submitBtn.addEventListener('submit', function(event) {
+    event.preventDefault();
     const height = document.querySelector('#inputHeight').value;
     const width = document.querySelector('#inputWidth').value;
     for (let i = 1; i <= width; i++) {
@@ -18,7 +19,6 @@ function makeGrid(event){
       }
     }
     change_pixel_color();
-    event.preventDefault();
   },
   false)
 };
